@@ -1,5 +1,8 @@
 # Complaint Management
 
+## Environmrnt Setup
+- Install [nodeJs](https://nodejs.org/en/)
+
 ## Backend
 
 - open cmd with backend folder path
