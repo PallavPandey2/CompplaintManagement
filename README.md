@@ -1,4 +1,7 @@
-# ComplaintManagement
+# Complaint Management
+
+## Environmrnt Setup
+- Install [nodeJs](https://nodejs.org/en/)
 
 ## Backend
 
