@@ -538,7 +538,7 @@ export default function Users1() {
                                 component={Link}
                                 to={`/edituser/${complain._id}`}
                               >
-                                Edit
+                                View
                               </Button>
                             </TableCell>
                             <TableCell>
