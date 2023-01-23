@@ -133,6 +133,14 @@ function NavBar() {
                     <Typography className={classes.userName} variant="h6">
                       {user?.result.name}
                     </Typography>
+                    <Button
+                      component={Link}
+                      to="/user"
+                      variant="contained"
+                      className={classes.Manage}
+                    >
+                      Manage User
+                    </Button>
 
                     <Button
                       component={Link}
