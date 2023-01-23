@@ -118,7 +118,7 @@ function Edituser() {
         </Modal.Header>
         <Modal.Body style={{ background: "#a5cdf0", color: "-moz-initial" }}>
           <FormGroup>
-            <FormControl>
+            {/* <FormControl>
               <InputLabel htmlFor="my-input">Name</InputLabel>
               <Input
                 onChange={(e) => onChangeSetState(e)}
@@ -129,8 +129,8 @@ function Edituser() {
                 inputProps={{ maxLength: 40 }}
               />
               <div style={validationMessageCSS}>{isname}</div>
-            </FormControl>
-            <FormControl>
+            </FormControl> */}
+            {/* <FormControl>
               <InputLabel htmlFor="my-input">Email</InputLabel>
               <Input
                 onChange={(e) => onChangeSetState(e)}
@@ -141,7 +141,7 @@ function Edituser() {
                 inputProps={{ maxLength: 50 }}
               />
               <div style={validationMessageCSS}>{isemail}</div>
-            </FormControl>
+            </FormControl> */}
             <FormControl>
               <InputLabel htmlFor="my-input">Complaint</InputLabel>
               <Input
@@ -185,13 +185,13 @@ function Edituser() {
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>
-          <Button
+          {/* <Button
             variant="primary"
             style={{ background: "#3d8bdb", color: "#fff" }}
             onClick={() => validateDetails(id)}
           >
             Edit User
-          </Button>
+          </Button> */}
 
           <Button
             variant="secondary"

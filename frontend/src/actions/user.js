@@ -10,7 +10,7 @@ export const signin = (formData, navigate) => async (dispatch) => {
     
     dispatch({ type: AUTH, data });
    
-    navigate('/home');
+    navigate('/user');
   } catch (error) {
     const a=error.response.data.message;
     

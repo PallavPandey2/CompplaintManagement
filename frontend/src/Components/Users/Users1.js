@@ -122,7 +122,7 @@ const headCells = [
     id: "Edit",
 
     disablePadding: false,
-    label: "Edit",
+    label: "View",
     align: "left",
   },
   {

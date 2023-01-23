@@ -26,16 +26,11 @@ import {
 } from "@mui/material";
 
 export default function Complaint() {
-  const [userold] = useState(JSON.parse(localStorage.getItem("profile")));
-
-  const user = JSON.parse(localStorage.getItem("profile"));
   let Navigate = useNavigate();
 
   const [show, setShow] = useState(false);
 
-  const [name, setName] = useState(user?.result?.name);
 
-  const [email, setEmail] = useState(user?.result?.email);
   const [problem, setProblem] = useState("");
   const [action, setAction] = useState("");
   const [checked, setChecked] = useState();
@@ -53,9 +48,9 @@ export default function Complaint() {
       pic !== " "
     ) {
       const a = {
-        name: user?.result?.name,
+        name: "Annonymus",
         problem: problem,
-        email: user?.result?.email,
+        email: "Annonymus",
         complaint_des: complaint_des,
         action: action,
         citizen: checked,
@@ -70,12 +65,6 @@ export default function Complaint() {
       alert("Please fill all the feilds");
     }
   };
-
-  useEffect(() => {
-    if (!user) {
-      Navigate("/");
-    }
-  }, []);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -137,7 +126,7 @@ export default function Complaint() {
         </Modal.Header>
         <Modal.Body style={{ background: "#a5cdf0", color: "-moz-initial" }}>
           <FormGroup>
-            <FormControl>
+            {/* <FormControl>
               <InputLabel htmlFor="my-input">Name</InputLabel>
               <Input
                 onChange={(e) => setName(e.target.value)}
@@ -146,8 +135,8 @@ export default function Complaint() {
                 value={name}
                 id="my-input"
               />
-            </FormControl>
-            <FormControl>
+            </FormControl> */}
+            {/* <FormControl>
               <InputLabel htmlFor="my-input">Email</InputLabel>
               <Input
                 disabled
@@ -156,7 +145,7 @@ export default function Complaint() {
                 value={email}
                 id="my-input"
               />
-            </FormControl>
+            </FormControl> */}
 
             <FormControl>
               <FormControlLabel

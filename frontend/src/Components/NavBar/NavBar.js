@@ -31,13 +31,14 @@ const useStyles = makeStyles({
   },
   profile: {
     display: "flex",
-    justifyContent: "space-between",
-    width: "400px",
+    flexDirection: "row-reverse",
+    alignItems: 'center',
   },
   userName: {
     display: "flex",
     alignItems: "center",
     color: "#fff",
+    display: `inline-block`,
   },
   brandContainer: {
     display: "flex",
@@ -45,10 +46,13 @@ const useStyles = makeStyles({
   },
   avatar: {
     backgroundColor: "#3d8bdb",
+    display: `inline-block`,
+    padding: '12px',
   },
   logout: {
     background: "#3d8bdb",
     color: "#fff",
+    display: `inline-block`,
   },
 
   Manage: {
@@ -78,101 +82,34 @@ function NavBar() {
           <Link to="home" className="navbar-brand">
             Complaint
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          {!user && <Link
+            to="/signin"
+            aria-current="page"
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse ms-1" id="navbarNav">
-            <ul className="navbar-nav">
-              {user?.result ? (
-                user?.result?.rollid ? (
-                  <div className={classes.profile}>
-                    <Avatar
-                      className={classes.avatar}
-                      alt={user?.result.name}
-                      src={user?.result.imageUrl}
-                    >
-                      {user?.result.name.charAt(0)}
-                    </Avatar>
-                    <Typography className={classes.userName} variant="h6">
-                      {user?.result.name}
-                    </Typography>
-
-                    <Button
-                      component={Link}
-                      to="/user"
-                      variant="contained"
-                      className={classes.Manage}
-                    >
-                      Manage User
-                    </Button>
-                    <Button
-                      variant="contained"
-                      className={classes.logout}
-                      onClick={logout}
-                    >
-                      Logout
-                    </Button>
-                  </div>
-                ) : (
-                  <div className={classes.profile}>
-                    <Avatar
-                      className={classes.avatar}
-                      alt={user?.result.name}
-                      src={user?.result.imageUrl}
-                    >
-                      {user?.result.name.charAt(0)}
-                    </Avatar>
-                    <Typography className={classes.userName} variant="h6">
-                      {user?.result.name}
-                    </Typography>
-                    <Button
-                      component={Link}
-                      to="/user"
-                      variant="contained"
-                      className={classes.Manage}
-                    >
-                      Manage User
-                    </Button>
-
-                    <Button
-                      component={Link}
-                      to="/complaints"
-                      variant="contained"
-                      className={classes.Manage}
-                    >
-                      Manage Complains
-                    </Button>
-                    <Button
-                      variant="contained"
-                      className={classes.logout}
-                      onClick={logout}
-                    >
-                      Logout
-                    </Button>
-                  </div>
-                )
-              ) : (
-                <>
-                  <li className="nav-item">
-                    <Link
-                      to="/signin"
-                      className="nav-link active"
-                      aria-current="page"
-                    >
-                      Sign in
-                    </Link>
-                  </li>
-                </>
-              )}
-            </ul>
+            Sign in
+          </Link>}
+          <div className="" id="navbarNav" style={{ textAlign: 'right', display: 'inline-block', flexGrow: '1' }}>
+            <div className="" style={{ display: 'inline-block' }}>
+              {user && <div className={classes.profile}>
+                <Avatar
+                  className={classes.avatar}
+                  alt={user?.result.name}
+                  src={user?.result.imageUrl}
+                >
+                  {user?.result.name.charAt(0)}
+                </Avatar>
+                <Typography className={classes.userName} variant="h6">
+                  {user?.result.name}
+                </Typography>
+                <Button
+                  variant="contained"
+                  className={classes.logout}
+                  onClick={logout}
+                >
+                  Logout
+                </Button>
+              </div>}
+            </div>
           </div>
         </div>
       </nav>
