@@ -204,11 +204,11 @@ export default function Complaint() {
                 onChange={(e) => setProblem(e.target.value)}
               >
                 <option selected>Complaint relate to</option>
-                <option value="Road">Road</option>
-                <option value="Building">Building</option>
-                <option value="Drainage">Drainage</option>
-                <option value="Water supply">Water supply</option>
-                <option value="Cleaning">Cleaning</option>
+                <option value="Drug Dealing">Drug Dealing</option>
+                <option value="Driving While Intoxicated">Driving While Intoxicated</option>
+                <option value="Harassment">Harassment</option>
+                <option value="Violence">Violence</option>
+                <option value="Aggression">Aggression</option>
               </select>
             </FormControl>
 
